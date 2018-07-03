@@ -40,10 +40,13 @@
 <body>
 <nav class="main-nav-outer" id="test">
     <!--main-nav-start-->
-    <div class="container">
+    <div>
         <ul class="main-nav">
             <li>
                 <a href="/"><i class="fa fa-home" style="margin-right: 10px;"></i>Empresa</a>
+            </li>
+            <li>
+                <a href="/equipo"><i class="fa fa-users" style="margin-right: 10px;"></i>Equipo</a>
             </li>
             <li>
                 <a href="/productos"><i class="fa fa-archive" style="margin-right: 10px;"></i>Productos</a>
@@ -52,7 +55,10 @@
                 <a href="/"><img src="/img/logo_curmasa.jpg" alt="" width="120px"></a>
             </li>
             <li>
-                <a href="/team"><i class="fa fa-users" style="margin-right: 10px;"></i>Equipo</a>
+                <a href="/contact"><i class="fa fa-clipboard" style="margin-right: 10px;"></i>Proveedores</a>
+            </li>
+            <li>
+                <a href="/contact"><i class="fa fa-map" style="margin-right: 10px;"></i>Donde estamos</a>
             </li>
             <li>
                 <a href="/contact"><i class="fa fa-phone" style="margin-right: 10px;"></i>Contacta</a>
@@ -61,35 +67,37 @@
         <a class="res-nav_click" href="#"><i class="fa-bars"></i></a>
     </div>
 </nav>
-
+@if(url()->current() == "https://curmasa.oo")
 <div  class="container fondo" style="margin-top: 50px;">
     <div class="row justify-content-center">
-
         <div class="col-lg-5 text-center wow fadeInLeft delay-04s">
             <img src="img/curmasa_empresa.png" class="img-fluid" alt="" width="600px" style="margin-bottom: 15px;">
         </div>
         <div class="col-12 col-lg-7">
-            <h3 class="text-info wow fadeInRight delay-01s" style="margin-bottom:20px; font-size: 20px;"><i class="fa fa-boxes"></i> Comercial Murciana de Materiales S.L</h3>
+            <h3 class="text-info wow fadeInRight delay-01s" style="margin-bottom:20px; font-size: 20px;">  Comercial Murciana de Materiales S.L</h3>
             <p style="font-size: 15px; text-align: justify;margin-bottom: 10px;" class="wow fadeInDown delay-02s">
-                <i class="fa fa-angle-right" style="font-size: 17px; color:black; font-weight: bold; margin-right: 5px;"></i>
+                <i class="fa fa-caret-square-o-right" style="font-size: 12px; color:black; font-weight: bold; margin-right: 5px;"></i>
                 Curmasa nace en el año 1986 como una empresa para la comercialización de todos los productos del sector de la fontanería.
             </p>
             <p style="font-size: 15px; text-align: justify; margin-bottom: 10px;" class="wow fadeInDown delay-03s">
-                <i class="fa fa-angle-right" style="font-size: 17px; color:black; font-weight: bold; margin-right: 5px;"></i>
+                <i class="fa fa-caret-square-o-right" style="font-size: 12px; color:black; font-weight: bold; margin-right: 5px;"></i>
                 La independencia y la profesionalización de la gestión de la central para asegurar la equidad, se estructuran desde su creación. A través del tiempo Curmasa empezó a desarrollar una ampliación de distribución, y un aumento de clientes de otras provincias.
             </p>
             <p style="font-size: 15px; text-align: justify;margin-bottom: 10px;" class="wow fadeInDown delay-04s">
-            <i class="fa fa-angle-right" style="font-size: 17px; color:black; font-weight: bold; margin-right: 5px;"></i>
+            <i class="fa fa-caret-square-o-right" style="font-size: 12px; color:black; font-weight: bold; margin-right: 5px;"></i>
                 Mas de 25 años de historia han hecho de Curmasa, un pozo de experiencias, fruto del debate entre sus clientes donde las relaciones y las formas de hacer, junto con la transparencia, se han convertido en valores y cultura de empresa.
             </p>
             <p style="font-size: 15px; text-align: justify;margin-bottom: 10px;" class="wow fadeInDown delay-05s">
-            <i class="fa fa-angle-right" style="font-size: 17px; color:black; font-weight: bold; margin-right: 5px;"></i>
+            <i class="fa fa-caret-square-o-right" style="font-size: 12px; color:black; font-weight: bold; margin-right: 5px;"></i>
                  Valores firmemente establecidos en la organización como son la rigor empresarial e igualdad entre todos los clientes, al mismo tiempo que la firmeza en el desarrollo y cuidado del sector de la fontanería y climatización. Nuestra filosofía y trato con los fabricantes, han hecho que con los años se pueda hablar de una relación de amistad con nuestros proveedores.
             </p>
 
         </div>
     </div>
 </div>
+@else
+@yield('content')
+@endif
 <!--<div class="container" style="margin-top: 50px;">
     <div class="row justify-content-center">
         <div class="col-12 col-lg-7 wow fadeInLeft">
@@ -192,7 +200,7 @@
 <footer class="footer">
     <div class="container">
         <div class="footer-logo"><a href="#"><img src="img/logo.jpg" alt=""></a></div>
-        <span class="copyright">&copy;CURMASA {{ date('Y') }}. Todos los derechos reservados.</span>
+        <span class="copyright">&copy; CURMASA {{ date('Y') }}. Todos los derechos reservados.</span>
     </div>
 </footer>
 </body>

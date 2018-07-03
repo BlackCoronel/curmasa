@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/equipo', function(){
+    return view('layouts.equipo');
+});
