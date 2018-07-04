@@ -58,7 +58,7 @@
                 <a href="/contact"><i class="fa fa-clipboard" style="margin-right: 10px;"></i>Proveedores</a>
             </li>
             <li>
-                <a href="/contact"><i class="fa fa-map" style="margin-right: 10px;"></i>Donde estamos</a>
+                <a href="/localizacion"><i class="fa fa-map" style="margin-right: 10px;"></i>Donde estamos</a>
             </li>
             <li>
                 <a href="/contact"><i class="fa fa-phone" style="margin-right: 10px;"></i>Contacta</a>

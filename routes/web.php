@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/equipo', function(){
     return view('layouts.equipo');
 });
+
+Route::get('/localizacion', function(){
+   return view('layouts.donde_estamos');
+});
