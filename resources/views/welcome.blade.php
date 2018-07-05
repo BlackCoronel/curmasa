@@ -19,7 +19,7 @@
     <link href="/css/responsive.css" rel="stylesheet" type="text/css">
     <link href="/css/animate.css" rel="stylesheet" type="text/css">
     <!-- links Javascript -->
-    <script type="text/javascript" src="/js/jquery.1.8.3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="/js/bootstrap.js"></script>
     <script type="text/javascript" src="/js/jquery-scrolltofixed.js"></script>
     <script type="text/javascript" src="/js/jquery.easing.1.3.js"></script>
@@ -61,14 +61,14 @@
                 <a href="/localizacion"><i class="fa fa-map" style="margin-right: 10px;"></i>Donde estamos</a>
             </li>
             <li>
-                <a href="/contact"><i class="fa fa-phone" style="margin-right: 10px;"></i>Contacta</a>
+                <a href="/contacto"><i class="fa fa-phone" style="margin-right: 10px;"></i>Contacta</a>
             </li>
         </ul>
         <a class="res-nav_click" href="#"><i class="fa-bars"></i></a>
     </div>
 </nav>
 @if(url()->current() == "https://curmasa.oo")
-<div  class="container fondo" style="margin-top: 50px;">
+<div  class="container fondo" style="margin-top: 50px;" id="contenido">
     <div class="row justify-content-center">
         <div class="col-lg-5 text-center wow fadeInLeft delay-04s">
             <img src="img/curmasa_empresa.png" class="img-fluid" alt="" width="600px" style="margin-bottom: 15px;">
@@ -96,107 +96,9 @@
     </div>
 </div>
 @else
-@yield('content')
+    @yield('content')
 @endif
-<!--<div class="container" style="margin-top: 50px;">
-    <div class="row justify-content-center">
-        <div class="col-12 col-lg-7 wow fadeInLeft">
-            <h3 class="text-info wow fadeInLeft delay-02s" style="margin-bottom:20px; font-size: 20px;">
-                <i class="fa fa-book"></i> Sobre nuestra empresa</h3>
-            <p  style="font-size: 15px; text-align: justify;" class=" wow fadeInRight delay-04s">
-                <i class="fa fa-angle-right" style="font-size: 17px; color:black; font-weight: bold; margin-right: 5px;"></i>
-                Viseras Sakali, S. L. se sitúa entre los principales productores de accesorios para vehículos industriales en el ámbito de la Unión Europea.
-            </p>
-            <p  style="font-size: 15px; margin-top: 10px; text-align: justify;" class="wow fadeInRight delay-06s">
-                <i class="fa fa-angle-right" style="font-size: 17px; color:black; font-weight: bold; margin-right: 5px;"></i>
-                La constante investigación, innovación, control de materias primas y acabados dan como resultado productos con las más altas cotas de calidad.
-                Los procesos de producción se desarrollan bajo un riguroso control de calidad y aseguran soluciones completas para un mercado cada vez más exigente.
-            </p>
-            <p  style="font-size: 15px; margin-top: 10px; text-align: justify; margin-bottom: 50px;" class="wow fadeInRight delay-07s">
-                <i class="fa fa-angle-right" style="font-size: 17px; color:black; font-weight: bold; margin-right: 5px;"></i>
-                Sakali ha logrado situarse como líder en el mercado europeo. Está presente en todos los países de la Comunidad Europea de manera consolidada,
-                ofreciendo calidad y eficacia en todos sus productos y servicios.
-            </p>
-        </div>
-        <div class="col-12 col-lg-4 text-center">
-            <img src="img/empresa.png" class="img-fluid wow fadeInUp delay-06s" alt="" style="margin-bottom: 15px;">
-        </div>
-    </div>
-    <hr style="color:lightblue; background-color: #5bc0de; height: 3px;" />
-</div>
-<div class="container" style="margin-top: 50px;">
-    <div class="row justify-content-center">
-        <div class="col-12 col-lg-5 text-center" style="margin-bottom: 20px;">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d935.2548909960152!2d-1.2079385888664913!3d37.95822353628943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd637fe38e356265%3A0xf2076f4c78cd289a!2sViseras+Sakali%2C+s.l.!5e0!3m2!1ses!2ses!4v1527155795965" width="400" height="300" frameborder="0" style="border:0" allowfullscreen class="wow fadeInDown delay-06s"></iframe>
-        </div>
-        <div class="col-12 col-lg-7">
-            <h3 class="text-info wow fadeInLeft delay-04s" style="margin-bottom:20px; font-size: 20px;"><i class="fa fa-location-arrow"></i> Donde encontrarnos</h3>
-            <p style="font-size: 15px; text-align: justify;" class="wow fadeInRight delay-02s">
-                <i class="fa fa-caret-right" style="font-size: 17px; color:black; font-weight: bold; margin-right: 5px;"></i>
-                Estamos situados en el Polígono Industrial Oeste. Avenida de las Américas Parc. 5/14. 30169 Alcantarilla - Murcia.</p>
-            <p style="font-size: 15px; text-align: justify; margin-top: 10px;" class=" wow fadeInRight delay-02s">
-                <i class="fa fa-caret-right" style="font-size: 17px; color:black; font-weight: bold; margin-right: 5px;"></i>
-                Horario : <span style="font-weight: bold;">Lunes - Jueves</span>: 8:30 am - 19:00 pm<span  style="font-weight: bold;"> Viernes</span>:  8:30 am - 14:30 pm
-            </p>
-        </div>
-    </div>
-    <hr style="color:lightblue; background-color: #5bc0de; height: 3px;" />
-</div>-->
-<!--main-nav-end-->
-<!--<section class="main-section team" id="equipo">
-    <div class="container">
-        <h2>team</h2>
-        <h6>Eche un vistazo a nuesto equipo</h6>
-       <div class="team-leader-block clearfix">
-            <div class="team-leader-box">
-                <div class="team-leader wow fadeInDown delay-03s">
-                    <div class="team-leader-shadow"><a href="#"></a></div>
-                    <img src="img/team-leader-pic1.jpg" alt="">
-                    <ul>
-                        <li><a href="#" class="fa-twitter"></a></li>
-                        <li><a href="#" class="fa-facebook"></a></li>
-                        <li><a href="#" class="fa-pinterest"></a></li>
-                        <li><a href="#" class="fa-google-plus"></a></li>
-                    </ul>
-                </div>
-                <h3 class="wow fadeInDown delay-03s">Walter White</h3>
-                <span class="wow fadeInDown delay-03s">Chief Executive Officer</span>
-                <p class="wow fadeInDown delay-03s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
-            </div>
-            <div class="team-leader-box">
-                <div class="team-leader  wow fadeInDown delay-06s">
-                    <div class="team-leader-shadow"><a href="#"></a></div>
-                    <img src="img/team-leader-pic2.jpg" alt="">
-                    <ul>
-                        <li><a href="#" class="fa-twitter"></a></li>
-                        <li><a href="#" class="fa-facebook"></a></li>
-                        <li><a href="#" class="fa-pinterest"></a></li>
-                        <li><a href="#" class="fa-google-plus"></a></li>
-                    </ul>
-                </div>
-                <h3 class="wow fadeInDown delay-06s">Jesse Pinkman</h3>
-                <span class="wow fadeInDown delay-06s">Product Manager</span>
-                <p class="wow fadeInDown delay-06s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
-            </div>
-            <div class="team-leader-box">
-                <div class="team-leader wow fadeInDown delay-09s">
-                    <div class="team-leader-shadow"><a href="#"></a></div>
-                    <img src="img/team-leader-pic3.jpg" alt="">
-                    <ul>
-                        <li><a href="#" class="fa-twitter"></a></li>
-                        <li><a href="#" class="fa-facebook"></a></li>
-                        <li><a href="#" class="fa-pinterest"></a></li>
-                        <li><a href="#" class="fa-google-plus"></a></li>
-                    </ul>
-                </div>
-                <h3 class="wow fadeInDown delay-09s">Skyler white</h3>
-                <span class="wow fadeInDown delay-09s">Accountant</span>
-                <p class="wow fadeInDown delay-09s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat sollicitudin cursus. Dolor sit amet, consectetur adipiscing elit proin consequat.</p>
-            </div>
-        </div>
-    </div>
-</section>-->
-<!--business-talking-end-->
+
 <footer class="footer">
     <div class="container">
         <div class="footer-logo"><a href="#"><img src="img/logo.jpg" alt=""></a></div>
@@ -298,5 +200,19 @@
 
     });
 </script>
+<script>
 
+    $(document).ready(function(){
+
+       //$("#contenido").hide();
+
+       $("#banner").click(function(){
+
+          $(this).hide();
+          $("#contenido").show();
+
+       });
+    });
+
+</script>
 </html>

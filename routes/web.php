@@ -22,3 +22,7 @@ Route::get('/equipo', function(){
 Route::get('/localizacion', function(){
    return view('layouts.donde_estamos');
 });
+
+Route::get('/contacto', function(){
+   return view('layouts.contacto');
+});
