@@ -99,6 +99,11 @@
     @yield('content')
 @endif
 
+@if(url()->current() == "https://curmasa.oo")
+<div class="container" id="banner">
+    <img src="img/imagen_banner_2.png" alt="">
+</div>
+@endif
 <footer class="footer">
     <div class="container">
         <div class="footer-logo"><a href="#"><img src="img/logo.jpg" alt=""></a></div>
@@ -201,18 +206,15 @@
     });
 </script>
 <script>
-
     $(document).ready(function(){
 
-       //$("#contenido").hide();
+       $("#contenido").hide();
 
-       $("#banner").click(function(){
-
-          $(this).hide();
-          $("#contenido").show();
-
-       });
+       setTimeout(function(){
+           $("#banner").fadeOut(function(){
+               $("#contenido").show();
+           });
+       },5000);
     });
-
 </script>
 </html>
