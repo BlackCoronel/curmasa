@@ -26,3 +26,7 @@ Route::get('/localizacion', function(){
 Route::get('/contacto', function(){
    return view('layouts.contacto');
 });
+
+Route::get('/proveedores',function(){
+   return view('layouts.proveedores');
+});

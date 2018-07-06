@@ -12,19 +12,19 @@
                     </div>
                     <div class="contact-info-box phone clearfix">
                         <h3><i class="fa-phone"></i>Teléfono:</h3>
-                        <span>+34 968 80 87 54</span>
+                        <span> 968 83 45 60</span>
                     </div>
                     <div class="contact-info-box phone clearfix">
                         <h3><i class="fa fa-fax"></i>Fax:</h3>
-                        <span>+34 968 80 87 54</span>
+                        <span> 968 83 45 60</span>
                     </div>
                     <div class="contact-info-box email clearfix">
                         <h3><i class="fa fa-envelope"></i>E-mail:</h3>
-                        <span>info@sakali.com</span>
+                        <span>administracion@curmasa.info</span>
                     </div>
                     <div class="contact-info-box hours clearfix">
                         <h3><i class="fa-clock-o"></i>Horario:</h3>
-                        <span>L-V: 8:30 am - 14:30 pm <br /> 16:00 pm - 19:00 pm</span>
+                        <span>L-V: 8:30 am - 14:30 pm <br /> 16:00 pm - 19:30 pm</span>
                     </div>
                     <ul class="social-link">
                         <li class="twitter"><a href="https://twitter.com/Viseras_Sakali" target="_blank"><i class=" fa fa-twitter"></i></a></li>
@@ -38,12 +38,11 @@
                         <div id="sendmessage">Your message has been sent. Thank you!</div>
                         <div id="errormessage"></div>
 
-                        <form action="POST">
+                        <form method="POST" action="/contacto">
                             <input type="text" class="form-control input-text" name="name" placeholder="Nombre">
-                            <input type="text" class="form-control input-text" name="apellidos" placeholder="Apellidos">
-                            <input type="email" class="form-control input-text" name="email" placeholder="email">
-                            <input type="text" class="form-control input-text" name="telefono" placeholder="telefono">
-                            <input type="text" class="form-control input-text" name="tipo_vivienda" placeholder="Tipo de Vivienda">
+                            <input type="email" class="form-control input-text" name="email" placeholder="Email">
+                            <input type="text" class="form-control input-text" name="telefono" placeholder="Telefono">
+                            <input type="text" class="form-control input-text" name="asunto" placeholder="Asunto">
                             <textarea name="consulta" id="consulta" class="form-control input-text text-area">Escriba aquí su consulta</textarea>
                             <div class="text-center">
                                 <input type="submit" class="input-btn">
@@ -56,12 +55,12 @@
         </section>
     </div>
     <script>
-        $(document).ready(function(){
-          $("#consulta").focus(function(){
-              if($(this).val() == 'Escriba aquí su consulta') {
-                  $(this).val('');
-              }
-          });
+        $(window).load(function(){
+            $("#consulta").focus(function(){
+                if($(this).val() == 'Escriba aquí su consulta') {
+                    $(this).val('');
+                }
+            });
             $("#consulta").focusout(function(){
                 if($(this).val() == ''){
                     $("#consulta").val('Escriba aquí su consulta');

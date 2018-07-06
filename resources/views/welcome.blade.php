@@ -5,9 +5,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, maximum-scale=1">
-
-    <title>Homepage</title>
-    <link rel="icon" href="favicon.png" type="image/png">
+    @if(Request::path() == "/")
+        <title> CURMASA </title>
+    @else
+        <title> CURMASA - {{ strtoupper(Request::path()) }}</title>
+    @endif
+    <link rel="icon" href="img/logo_curmasa.ico">
     <link rel="shortcut icon" href="favicon.ico" type="img/x-icon">
 
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -19,7 +22,7 @@
     <link href="/css/responsive.css" rel="stylesheet" type="text/css">
     <link href="/css/animate.css" rel="stylesheet" type="text/css">
     <!-- links Javascript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/jquery.1.8.3.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.js"></script>
     <script type="text/javascript" src="/js/jquery-scrolltofixed.js"></script>
     <script type="text/javascript" src="/js/jquery.easing.1.3.js"></script>
@@ -27,6 +30,7 @@
     <script type="text/javascript" src="/js/wow.js"></script>
     <script type="text/javascript" src="/js/classie.js"></script>
     <script src="/contactform/contactform.js"></script>
+
 
     <!-- =======================================================
     Theme Name: Knight
@@ -40,7 +44,7 @@
 <body>
 <nav class="main-nav-outer" id="test">
     <!--main-nav-start-->
-    <div>
+    <div class="container" style="width:100%;">
         <ul class="main-nav">
             <li>
                 <a href="/"><i class="fa fa-home" style="margin-right: 10px;"></i>Empresa</a>
@@ -55,7 +59,7 @@
                 <a href="/"><img src="/img/logo_curmasa.jpg" alt="" width="120px"></a>
             </li>
             <li>
-                <a href="/contact"><i class="fa fa-clipboard" style="margin-right: 10px;"></i>Proveedores</a>
+                <a href="/proveedores"><i class="fa fa-clipboard" style="margin-right: 10px;"></i>Proveedores</a>
             </li>
             <li>
                 <a href="/localizacion"><i class="fa fa-map" style="margin-right: 10px;"></i>Donde estamos</a>
@@ -68,12 +72,12 @@
     </div>
 </nav>
 @if(url()->current() == "https://curmasa.oo")
-<div  class="container fondo" style="margin-top: 50px;" id="contenido">
-    <div class="row justify-content-center">
+<div  class="container" style="margin-top: 50px;" id="contenido">
+    <div class="row justify-content-center ">
         <div class="col-lg-5 text-center wow fadeInLeft delay-04s">
-            <img src="img/curmasa_empresa.png" class="img-fluid" alt="" width="600px" style="margin-bottom: 15px;">
+            <img src="img/curmasa_portada.png" class="img-fluid" alt="" width="600px" style="margin-bottom: 15px;">
         </div>
-        <div class="col-12 col-lg-7">
+        <div class="col-12 col-lg-7 fondo">
             <h3 class="text-info wow fadeInRight delay-01s" style="margin-bottom:20px; font-size: 20px;">  Comercial Murciana de Materiales S.L</h3>
             <p style="font-size: 15px; text-align: justify;margin-bottom: 10px;" class="wow fadeInDown delay-02s">
                 <i class="fa fa-caret-square-o-right" style="font-size: 12px; color:black; font-weight: bold; margin-right: 5px;"></i>
@@ -96,15 +100,14 @@
     </div>
 </div>
 @else
-    @yield('content')
+ @yield('content')
 @endif
-
 @if(url()->current() == "https://curmasa.oo")
-<div class="container" id="banner">
-    <img src="img/imagen_banner_2.png" alt="">
+<div class="container" id="banner" style="margin-top: 50px;">
+    <img src="img/oferta_zenit_1.png" class="img-fluid">
 </div>
 @endif
-<footer class="footer">
+<footer class="footer" style="margin-top: 50px;">
     <div class="container">
         <div class="footer-logo"><a href="#"><img src="img/logo.jpg" alt=""></a></div>
         <span class="copyright">&copy; CURMASA {{ date('Y') }}. Todos los derechos reservados.</span>
@@ -205,16 +208,21 @@
 
     });
 </script>
+
 <script>
-    $(document).ready(function(){
-
-       $("#contenido").hide();
-
-       setTimeout(function(){
-           $("#banner").fadeOut(function(){
+    $(window).load(function(){
+        $("#contenido").hide();
+        setTimeout(function(){
+            $("#banner").fadeOut(function(){
                $("#contenido").show();
-           });
-       },5000);
+            });
+        },15000);
+
+        $("#banner").click(function(){
+           $(this).hide();
+            $("#contenido").show();
+        });
     });
 </script>
+
 </html>

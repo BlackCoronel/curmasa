@@ -1,12 +1,12 @@
 @extends('welcome')
 
 @section('content')
-    <div class="container fondo" style="margin-top: 50px;">
-        <div class="col-12 col-lg-7" style="margin-bottom: 20px;">
+    <div class="container fondo" style="margin-top: 50px;" id="bloque">
+        <div class="col-12 col-lg-7" style="margin-bottom: 20px; margin-top: 50px;">
             <h3 class="text-info wow fadeInRight delay-01s" style="margin-bottom:20px; font-size: 20px;"> <i class="fa fa-globe"></i> DONDE ESTAMOS</h3>
             <p style="font-size: 15px; text-align: justify;margin-bottom: 10px;" class="wow fadeInDown delay-03s">
                 <i class="fa fa-location-arrow" style="font-size: 12px; color:black; font-weight: bold; margin-right: 5px;"></i>
-               POLÍGONO INDUSTRIAL CABEZO CORTADO
+                POLÍGONO INDUSTRIAL CABEZO CORTADO
             </p>
             <p style="font-size: 15px; text-align: justify;margin-bottom: 10px;" class="wow fadeInDown delay-04s">
                 <i class="fa fa-location-arrow" style="font-size: 12px; color:black; font-weight: bold; margin-right: 5px;"></i>
@@ -24,10 +24,10 @@
 
     <script>
         $(document).ready(function(){
-           if($(window).width() < 600){
-               $("#maps").css("width", ($(window).width()) - 50);
-               $("#maps").css("height", ($('#maps').height()/1.5));
-           }
+            if($(window).width() < 600){
+                $("#maps").css("width", ($(window).width()) - 50);
+                $("#maps").css("height", ($('#maps').height()/1.5));
+            }
         });
     </script>
 @endsection
