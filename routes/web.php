@@ -30,3 +30,7 @@ Route::get('/contacto', function(){
 Route::get('/proveedores',function(){
    return view('layouts.proveedores');
 });
+
+Route::get('/productos','categoriasController@index');
+
+Route::get('/productos/{$categoria}', 'categoriasController@productos');
