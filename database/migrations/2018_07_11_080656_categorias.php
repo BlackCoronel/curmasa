@@ -16,6 +16,7 @@ class Categorias extends Migration
         schema::create('categorias', function(Blueprint $table){
             $table->increments('id');
             $table->string('nombre')->unique;
+            $table->string('slug');
             $table->string('imagen');
             $table->timestamps();
         });
